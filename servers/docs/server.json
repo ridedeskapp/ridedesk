@@ -3,10 +3,10 @@
   "name": "app.ridedesk/docs",
   "title": "RideDesk Developer Docs",
   "description": "Developer docs for building on RideDesk: booking API, widgets, per-account booking MCP. No auth.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "websiteUrl": "https://ridedesk.app/developers",
   "repository": {
-    "url": "https://github.com/ridenrank/ridedesk",
+    "url": "https://github.com/ridedeskapp/ridedesk",
     "source": "github"
   },
   "remotes": [
