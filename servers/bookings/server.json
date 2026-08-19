@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "app.ridedesk/bookings",
+  "title": "RideDesk Bookings",
+  "description": "Quote and book airport transfers on a RideDesk operator's live desk. Agents never set prices.",
+  "version": "1.0.1",
+  "websiteUrl": "https://ridedesk.app/developers",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://{tenant_domain}/api/mcp",
+      "variables": {
+        "tenant_domain": {
+          "description": "The operator's RideDesk domain: <workspace>.ridedesk.app or their verified custom domain. Requires the operator's AI agents add-on; connect via OAuth (staff consent) or an API key from Settings.",
+          "isRequired": true
+        }
+      }
+    }
+  ]
+}
