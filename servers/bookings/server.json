@@ -3,8 +3,12 @@
   "name": "app.ridedesk/bookings",
   "title": "RideDesk Bookings",
   "description": "Quote and book airport transfers on a RideDesk operator's live desk. Agents never set prices.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "websiteUrl": "https://ridedesk.app/developers",
+  "repository": {
+    "url": "https://github.com/ridenrank/ridedesk",
+    "source": "github"
+  },
   "remotes": [
     {
       "type": "streamable-http",
