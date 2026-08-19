@@ -1,5 +1,9 @@
 # RideDesk MCP servers
 
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-app.ridedesk-blue)](https://registry.modelcontextprotocol.io/?search=ridedesk)
+[![Docs](https://img.shields.io/badge/docs-ridedesk.app%2Fdevelopers-0a7)](https://ridedesk.app/developers)
+[![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+
 [RideDesk](https://ridedesk.app) is booking & dispatch software for transfer,
 chauffeur, taxi and vehicle-rental operators. It exposes two kinds of
 [Model Context Protocol](https://modelcontextprotocol.io) servers, both
@@ -26,11 +30,30 @@ builds a booking website:
 | `get_integration_brief` | A self-contained brief for building a booking site on the REST API |
 | `get_widget_snippets` | Copy-paste embed/attribution/live-chat tags |
 
-Add it to Claude Code:
+### Add it to your tools
+
+**Claude Code**
 
 ```
 claude mcp add --transport http ridedesk-docs https://ridedesk.app/api/mcp
 ```
+
+**Cursor** — [one-click install](cursor://anysphere.cursor-deeplink/mcp/install?name=ridedesk-docs&config=eyJ1cmwiOiJodHRwczovL3JpZGVkZXNrLmFwcC9hcGkvbWNwIn0=), or add to `~/.cursor/mcp.json`:
+
+```json
+{ "mcpServers": { "ridedesk-docs": { "url": "https://ridedesk.app/api/mcp" } } }
+```
+
+**VS Code**
+
+```
+code --add-mcp "{\"name\":\"ridedesk-docs\",\"type\":\"http\",\"url\":\"https://ridedesk.app/api/mcp\"}"
+```
+
+**Claude.ai / ChatGPT** — add a custom connector with the URL
+`https://ridedesk.app/api/mcp` (no authentication).
+
+A runnable REST example lives in [`examples/quote-and-book.mjs`](examples/quote-and-book.mjs).
 
 ## `app.ridedesk/bookings` — per-operator booking server
 
@@ -63,3 +86,7 @@ Settings → AI agents.
 ## Maintainer
 
 RideDesk is operated by RidenRank Ltd (UK). Contact: hello@ridedesk.app
+
+Security reports: see [SECURITY.md](SECURITY.md). The contents of this
+repository (registry definitions, examples, docs) are [MIT-licensed](LICENSE);
+the RideDesk product itself is closed source.
